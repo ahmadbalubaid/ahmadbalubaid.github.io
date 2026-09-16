@@ -6,10 +6,14 @@ Personal portfolio site. Static HTML/CSS, no build step — just open `index.htm
 
 ```
 .
-├── index.html          Hero + Featured Projects + Let's Connect sections
+├── index.html          Nav + Hero + Projects + About/Skills/Experience + Footer
 ├── assets/
 │   ├── style.css                  All styling (theme variables at the top)
-│   └── AhmedBalubaid_CV.pdf      One-page résumé (linked from both Download Resume buttons)
+│   ├── AhmedBalubaid_CV.pdf       One-page résumé (linked from both Download Resume buttons)
+│   └── images/
+│       ├── hospitality-dashboard.png        Featured project — Power BI dashboard screenshot
+│       ├── adware-detection-results.png     Adware Detection project — model results
+│       └── trip-registration-app.png        Trip Registration Platform — app screenshot
 └── README.md
 ```
 
@@ -26,11 +30,20 @@ Personal portfolio site. Static HTML/CSS, no build step — just open `index.htm
 
 ## What's built so far
 
-- Hero section (identity, tagline, CTAs, social links, skills strip, Data/IT split visual)
-- Featured Projects section (3 cards)
-- Let's Connect footer (LinkedIn, GitHub, Email, Download Resume)
+Redesigned with a warm, editorial palette (beige/green, Public Sans + Lora) — sticky nav, hero, Projects (one large featured card + two secondary cards), a three-column About / Skills / Experience section, and a minimal footer.
 
-Both "Download Resume" buttons are already wired to `assets/AhmedBalubaid_CV.pdf`. By design, no Experience/Education section is on the site — the résumé download covers that, and the site stays focused on the Hero + Projects pitch.
+- **Nav**: Projects / About / Experience / Contact, Download Resume as the top-right CTA
+- **Hero**: identity, tagline, location/availability, primary + secondary CTAs, social links
+- **Projects**: Hospitality Pre-Opening Analytics (featured, with stats + a placeholder for the real dashboard screenshot — see TODO below), Android Adware Detection, Trip Registration Platform
+- **About / Skills / Experience**: three-column layout, three roles listed
+- **Footer**: name, role, LinkedIn / GitHub / Email / Back to top
+
+Both "Download Resume" buttons are wired to `assets/AhmedBalubaid_CV.pdf`.
+
+### Still needs your input
+
+- **GitHub profile link** (hero + footer) — still `#`.
+- The featured project's "View Project" button points to `https://github.com/ahmadbalubaid/hospitality-preopening-analytics` as given — make sure that repo exists/is public before publishing.
 
 ## Customizing the theme
 

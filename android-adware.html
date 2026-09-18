@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android Adware Detection | Ahmed Balubaid</title>
+  <meta name="description" content="A machine learning project detecting Android adware from application permissions, comparing multiple classifiers and evaluating LightGBM across two datasets with hold-out and 5-fold cross-validation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a id="top"></a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html#top">Ahmed Balubaid</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-nav" href="AhmedBalubaid_CV.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="case-topbar section-inner">
+      <a class="breadcrumb" href="index.html#projects">&larr; Back to Projects</a>
+    </div>
+
+    <!-- ============ CASE HERO ============ -->
+    <section class="case-hero">
+      <div class="case-hero-inner">
+        <div class="case-category">Machine Learning &middot; Cybersecurity</div>
+        <h1 class="case-title">Android Adware Detection</h1>
+        <div class="case-subtitle">Machine Learning Model for Android Security</div>
+        <p class="case-desc">
+          A machine learning project focused on detecting Android adware by analyzing application permissions and behavioral features. Multiple machine learning approaches were evaluated, with LightGBM producing strong classification performance across the project datasets.
+        </p>
+        <div class="tag-row case-badges">
+          <span>Python</span><span>Pandas</span><span>scikit-learn</span><span>LightGBM</span><span>Jupyter Notebook</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-hero-image">
+      <div class="case-screenshot-frame" data-lightbox>
+        <img src="adware-detection-results.png" alt="Android Adware Detection — LightGBM model evaluation results">
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ AT A GLANCE ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Project at a Glance</h2>
+        <div class="metric-row">
+          <div class="metric-block"><span class="metric-num">171K+</span><span class="metric-label">Applications in Large Dataset</span></div>
+          <div class="metric-block"><span class="metric-num">97.4%</span><span class="metric-label">Best Cross-Validation Accuracy</span></div>
+          <div class="metric-block"><span class="metric-num">5-Fold</span><span class="metric-label">Cross-Validation</span></div>
+          <div class="metric-block"><span class="metric-num">LightGBM</span><span class="metric-label">Final Model</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Problem</h2>
+        <p class="case-body">
+          Android adware can create unwanted advertising behavior, privacy concerns, and poor user experiences.
+        </p>
+        <p class="case-body">
+          The objective of this project was to investigate whether machine learning could identify adware applications using extracted application features and permissions.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ THE DATA ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Data</h2>
+        <p class="case-body">Two datasets were evaluated in this project.</p>
+
+        <div class="data-entities">
+          <div class="data-entity">
+            <h3>Dataset 1</h3>
+            <p>171,151 applications &mdash; 147,443 adware, 23,708 benign. 441 columns: 440 binary permission/features and 1 target label.</p>
+          </div>
+          <div class="data-entity">
+            <h3>Dataset 2</h3>
+            <p>2,000 applications &mdash; 500 adware, 1,500 benign.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ ML PIPELINE ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Machine Learning Pipeline</h2>
+
+        <div class="workflow">
+          <div class="workflow-step">Android Applications</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Feature Extraction</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Data Preparation</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Model Training</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">LightGBM</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Model Evaluation</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Performance Analysis</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-section-content">
+        <div class="case-screenshot-frame" data-lightbox style="max-width:640px;">
+          <img src="adware-detection-pipeline.png" alt="Android Adware Detection — research and implementation pipeline">
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ MODEL DEVELOPMENT ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Model Development</h2>
+        <p class="case-body">
+          The project evaluated multiple classification algorithms before focusing on LightGBM for the final analysis. The workflow included data preparation, model training, hold-out evaluation, and 5-fold cross-validation.
+        </p>
+        <p class="case-body">Evaluation metrics included:</p>
+        <div class="tag-row">
+          <span>Accuracy</span><span>Precision</span><span>Recall</span><span>F1-Score</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Model Results</h2>
+
+        <div class="metric-row" style="max-width:320px; margin:0 auto 44px;">
+          <div class="metric-block"><span class="metric-num">97.4%</span><span class="metric-label">Best 5-Fold Cross-Validation Accuracy</span></div>
+        </div>
+
+        <div class="data-entities">
+          <div class="data-entity">
+            <h3>Dataset 2 &mdash; 5-Fold Cross-Validation</h3>
+            <p>Accuracy: 97.4%<br>Precision: 94.27%<br>Recall: 95.4%<br>F1-Score: 94.83%</p>
+          </div>
+          <div class="data-entity">
+            <h3>Dataset 1 &mdash; 5-Fold Cross-Validation</h3>
+            <p>Accuracy: 95%<br>Precision: 96.97%<br>Recall: 97.77%<br>F1-Score: 97.37%</p>
+          </div>
+        </div>
+
+        <div class="case-screenshot-frame" data-lightbox style="max-width:520px; margin-top:36px;">
+          <img src="adware-detection-results.png" alt="LightGBM model evaluation results — hold-out and 5-fold cross-validation">
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ WHAT THIS DEMONSTRATES ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">What This Project Demonstrates</h2>
+        <p class="case-body">This project demonstrates experience with:</p>
+        <div class="tag-row">
+          <span>Large-scale datasets</span><span>Data preparation</span><span>Binary classification</span><span>Model comparison</span><span>LightGBM</span><span>Cross-validation</span><span>Model evaluation</span><span>Cybersecurity analytics</span><span>Interpreting ML performance metrics</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ TECH STACK ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Tech Stack</h2>
+        <div class="tag-row" style="justify-content:center;">
+          <span>Python</span><span>Pandas</span><span>scikit-learn</span><span>LightGBM</span><span>Machine Learning</span><span>Jupyter Notebook</span><span>Data Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ PROJECT LINKS ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Project Links</h2>
+        <div class="case-cta-row">
+          <a class="btn btn-primary" href="https://github.com/ahmadbalubaid/android-adware-detection-lightgbm" target="_blank" rel="noopener">View GitHub Repository</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ EXPLORE ANOTHER PROJECT ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Explore Another Project</h2>
+        <div class="explore-grid">
+          <a class="explore-card" href="hospitality.html">
+            <div class="explore-eyebrow">Data Analytics &middot; Business Intelligence</div>
+            <div class="explore-title">Hospitality Pre-Opening Analytics</div>
+          </a>
+          <a class="explore-card" href="trip-registration.html">
+            <div class="explore-eyebrow">Development &amp; Automation</div>
+            <div class="explore-title">Trip Registration Platform</div>
+          </a>
+        </div>
+
+        <div class="case-prevnext">
+          <a class="prevnext-link" href="hospitality.html">
+            <span class="prevnext-label">Previous</span>
+            <span class="prevnext-title">&larr; Hospitality Pre-Opening Analytics</span>
+          </a>
+          <a class="prevnext-link next" href="trip-registration.html">
+            <span class="prevnext-label">Next</span>
+            <span class="prevnext-title">Trip Registration Platform &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-back-footer">
+      <a class="case-study-link" href="index.html">&larr; Back to Portfolio</a>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-identity">
+        <div class="footer-name">Ahmed Balubaid</div>
+        <div class="footer-role">Data Analyst | IT Specialist</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ahmedbalubaid" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahmadbalubaid" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:ahmadbalubaid8@gmail.com">Email</a>
+        <a href="index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <img id="lightbox-image" src="" alt="">
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

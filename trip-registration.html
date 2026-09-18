@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Registration Platform | Ahmed Balubaid</title>
+  <meta name="description" content="An internal web application built with Google Apps Script that replaced manual employee trip registration with a validated, capacity-aware digital workflow backed by Google Sheets." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a id="top"></a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html#top">Ahmed Balubaid</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-nav" href="AhmedBalubaid_CV.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="case-topbar section-inner">
+      <a class="breadcrumb" href="index.html#projects">&larr; Back to Projects</a>
+    </div>
+
+    <!-- ============ CASE HERO ============ -->
+    <section class="case-hero">
+      <div class="case-hero-inner">
+        <div class="case-category">Development &middot; Automation</div>
+        <h1 class="case-title">Trip Registration Platform</h1>
+        <div class="case-subtitle">Internal Web Application &amp; Workflow Automation</div>
+        <p class="case-desc">
+          An internal web-based platform developed to replace manual employee trip registration with a structured digital workflow. The application handles registration validation, department capacity control, live availability, and structured data storage in Google Sheets.
+        </p>
+        <div class="tag-row case-badges">
+          <span>Google Apps Script</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Google Sheets</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-hero-image">
+      <div class="case-screenshot-frame" data-lightbox>
+        <img src="trip-registration-app.png" alt="Trip Registration Platform — internal registration form">
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Problem</h2>
+        <p class="case-body">
+          Employee trip registration was being coordinated manually, making it difficult to manage availability, validate submissions, enforce department capacity, and maintain structured registration records.
+        </p>
+        <p class="case-body">
+          The goal was to create a simple internal tool that employees could use without requiring technical knowledge.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ THE SOLUTION ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Solution</h2>
+        <p class="case-body">
+          I developed a lightweight web application using Google Apps Script, Google Sheets, HTML, CSS, and JavaScript. Employees can submit their registration through a simple web interface while the backend validates the submission, checks department capacity, stores the registration, and updates live availability.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">How It Works</h2>
+        <div class="workflow">
+          <div class="workflow-step">Employee Registration</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Input Validation</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Department Capacity Check</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Registration Accepted</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Google Sheets Storage</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Live Availability Updated</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ CORE FEATURES ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Core Features</h2>
+        <div class="feature-grid">
+          <div class="feature-block">
+            <h3>Registration Form</h3>
+            <p>Employees submit the required trip information through a simple web interface.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Input Validation</h3>
+            <p>The application validates required fields and phone-number formatting before accepting a registration.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Department Capacity Control</h3>
+            <p>The backend checks existing registrations before allowing additional registrations from a department.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Live Availability</h3>
+            <p>Employees can view current department availability before registering.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Automated Data Storage</h3>
+            <p>Successful registrations are automatically stored as structured records in Google Sheets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ SCREENSHOT ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Application</h2>
+        <div class="case-screenshot-frame" data-lightbox style="max-width:560px;">
+          <img src="trip-registration-app.png" alt="Trip Registration Platform — employee registration form">
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ TECHNOLOGY ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Technology</h2>
+        <div class="tag-row" style="justify-content:center;">
+          <span>Google Apps Script</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Google Sheets</span><span>Workflow Automation</span><span>Data Validation</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ OUTCOME ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Outcome</h2>
+        <p class="case-body">
+          The platform transformed a manual registration process into a centralized digital workflow with structured data collection, automatic validation, department capacity control, and live availability.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ PROJECT LINKS ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Project Links</h2>
+        <div class="case-cta-row">
+          <a class="btn btn-primary" href="https://script.google.com/macros/s/AKfycbwaz37Fs3t5hd6C4qq81wsOoMyQCs2hlLS33rfE9pbgXftulgnmhFmL9i0JLCwYLDOfnA/exec" target="_blank" rel="noopener">Try the Live App</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ SOURCE CODE ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <div class="source-block">
+          <div class="source-label">Internal Project &mdash; Source Code Not Publicly Available</div>
+          <p>This project was developed for an internal operational workflow. The public portfolio case study focuses on the problem, solution, architecture, technologies, and user experience without publishing internal source code or operational data.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ EXPLORE ANOTHER PROJECT ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Explore Another Project</h2>
+        <div class="explore-grid">
+          <a class="explore-card" href="hospitality.html">
+            <div class="explore-eyebrow">Data Analytics &middot; Business Intelligence</div>
+            <div class="explore-title">Hospitality Pre-Opening Analytics</div>
+          </a>
+          <a class="explore-card" href="android-adware.html">
+            <div class="explore-eyebrow">Machine Learning &middot; Security</div>
+            <div class="explore-title">Android Adware Detection</div>
+          </a>
+        </div>
+
+        <div class="case-prevnext">
+          <a class="prevnext-link" href="android-adware.html">
+            <span class="prevnext-label">Previous</span>
+            <span class="prevnext-title">&larr; Android Adware Detection</span>
+          </a>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-back-footer">
+      <a class="case-study-link" href="index.html">&larr; Back to All Projects</a>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-identity">
+        <div class="footer-name">Ahmed Balubaid</div>
+        <div class="footer-role">Data Analyst | IT Specialist</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ahmedbalubaid" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahmadbalubaid" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:ahmadbalubaid8@gmail.com">Email</a>
+        <a href="index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <img id="lightbox-image" src="" alt="">
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

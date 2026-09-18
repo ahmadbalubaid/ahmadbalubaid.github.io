@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospitality Pre-Opening Analytics | Ahmed Balubaid</title>
+  <meta name="description" content="A Power BI dashboard tracking hotel pre-opening readiness, delayed work, departmental performance, and vendor & cost risk — built on a custom synthetic dataset with Python, SQL Server, and DAX." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a id="top"></a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html#top">Ahmed Balubaid</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-nav" href="AhmedBalubaid_CV.pdf" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="case-topbar section-inner">
+      <a class="breadcrumb" href="index.html#projects">&larr; Back to Projects</a>
+    </div>
+
+    <!-- ============ CASE HERO ============ -->
+    <section class="case-hero">
+      <div class="case-hero-inner">
+        <div class="case-category">Data Analytics &middot; Business Intelligence</div>
+        <h1 class="case-title">Hospitality Pre-Opening Analytics</h1>
+        <div class="case-subtitle">Power BI Dashboard for Pre-Opening Readiness &amp; Operational Risk</div>
+        <p class="case-desc">
+          An end-to-end hospitality analytics project designed to answer a critical pre-opening business question: is the hotel on track to open on time, and which departments, tasks, and vendors pose the greatest operational risk? Instead of using a ready-made dataset, I built a custom synthetic dataset from scratch using Python and Pandas, based on a fictional hotel pre-opening scenario. The data was cleaned, validated, structured, loaded into SQL Server for analysis, and visualized through a three-page Power BI dashboard.
+        </p>
+        <div class="tag-row case-badges">
+          <span>Python</span><span>Pandas</span><span>SQL Server</span><span>Power BI</span><span>DAX</span><span>Data Modeling</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-hero-image">
+      <div class="case-screenshot-frame" data-lightbox>
+        <img src="hospitality-dashboard.png" alt="Hospitality Pre-Opening Analytics — Power BI executive overview dashboard">
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ AT A GLANCE ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Project at a Glance</h2>
+        <div class="metric-row">
+          <div class="metric-block"><span class="metric-num">333</span><span class="metric-label">Unique Tasks</span></div>
+          <div class="metric-block"><span class="metric-num">3,996</span><span class="metric-label">Weekly Snapshots</span></div>
+          <div class="metric-block"><span class="metric-num">10</span><span class="metric-label">Departments</span></div>
+          <div class="metric-block"><span class="metric-num">95.27%</span><span class="metric-label">Latest Snapshot Readiness</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ BUSINESS PROBLEM ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Business Problem</h2>
+        <p class="case-body">
+          Hotel pre-opening programs involve hundreds of interconnected tasks across multiple departments, vendors, deadlines, and operational dependencies.
+        </p>
+        <p class="case-body">
+          Management needs more than a simple task list. They need visibility into overall readiness, delayed work, critical issues, departmental performance, vendor risk, and cost variance. This project was designed to transform that operational complexity into a decision-support dashboard for management.
+        </p>
+        <blockquote class="case-question">&ldquo;Is the hotel ready to open, and where should management focus attention?&rdquo;</blockquote>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ DATASET CREATION ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Building the Dataset</h2>
+        <p class="case-body">
+          Rather than downloading a ready-made analytics dataset, I designed and generated a custom synthetic dataset using Python and Pandas. The dataset simulates a hotel pre-opening program across 10 departments and tracks task progress through 12 weekly snapshots.
+        </p>
+
+        <div class="data-entities">
+          <div class="data-entity">
+            <h3>Tasks</h3>
+            <p>333 unique pre-opening tasks including ownership, priority, critical-path status, planned dates, vendors, and costs.</p>
+          </div>
+          <div class="data-entity">
+            <h3>Task Snapshots</h3>
+            <p>3,996 weekly observations tracking task status and progress over time.</p>
+          </div>
+          <div class="data-entity">
+            <h3>Departments</h3>
+            <p>10 operational and support departments.</p>
+          </div>
+          <div class="data-entity">
+            <h3>Vendors</h3>
+            <p>Vendor information covering internal and external delivery responsibilities.</p>
+          </div>
+        </div>
+
+        <div class="workflow">
+          <div class="workflow-step">Pre-Opening Framework</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Python / Pandas</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Synthetic Dataset Generation</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Data Cleaning &amp; Validation</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">SQL Server</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Power BI / DAX</div>
+          <div class="workflow-arrow">&darr;</div>
+          <div class="workflow-step">Management Insights</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ SQL & DATA ANALYSIS ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">SQL &amp; Data Analysis</h2>
+        <p class="case-body">
+          After generating and validating the dataset, I loaded the analysis-ready data into SQL Server. SQL analysis was used to explore task performance, departmental readiness, operational risks, and cost patterns.
+        </p>
+        <div class="tag-row">
+          <span>JOINs</span><span>CASE statements</span><span>GROUP BY</span><span>HAVING</span><span>Aggregate functions</span><span>Data validation</span><span>Business KPI analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ DATA MODEL & POWER BI ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">From Data to Decision Support</h2>
+        <p class="case-body">
+          The cleaned data was modeled in Power BI using relationships between departments, tasks, task snapshots, vendors, and date dimensions. DAX measures were created to track operational KPIs including:
+        </p>
+        <div class="tag-row">
+          <span>Overall Readiness</span><span>Latest Snapshot Readiness</span><span>Delayed Tasks</span><span>Blocked Tasks</span><span>High-Risk Tasks</span><span>Critical Open Issues</span><span>Critical Path Readiness</span><span>Planned Cost</span><span>Actual Cost</span><span>Cost Variance</span><span>Cost Variance %</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ DASHBOARD ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">The Dashboard</h2>
+
+        <div class="screenshot-block">
+          <div class="screenshot-block-head">
+            <div class="screenshot-title">01 &mdash; Executive Overview</div>
+            <p class="screenshot-desc">Provides management with a high-level view of hotel readiness, delayed work, blocked tasks, high-risk activities, critical issues, readiness trends, and departmental performance.</p>
+          </div>
+          <div class="case-screenshot-frame" data-lightbox>
+            <img src="01_Executive_Overview.png" alt="Executive Overview — hotel pre-opening readiness dashboard">
+          </div>
+        </div>
+
+        <div class="screenshot-block">
+          <div class="screenshot-block-head">
+            <div class="screenshot-title">02 &mdash; Action Center</div>
+            <p class="screenshot-desc">Turns the dashboard from passive reporting into an operational management tool by highlighting tasks requiring immediate attention and allowing management to focus on priority risks.</p>
+          </div>
+          <div class="case-screenshot-frame" data-lightbox>
+            <img src="02_Action_Center.png" alt="Action Center — priority tasks requiring management attention">
+          </div>
+        </div>
+
+        <div class="screenshot-block">
+          <div class="screenshot-block-head">
+            <div class="screenshot-title">03 &mdash; Vendor &amp; Cost Performance</div>
+            <p class="screenshot-desc">Analyzes vendor performance and financial variance to identify potential delivery and cost risks before opening.</p>
+          </div>
+          <div class="case-screenshot-frame" data-lightbox>
+            <img src="03_Vendor_Cost_Performance.png" alt="Vendor and Cost Performance — cost variance and vendor delivery risk">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ KEY RESULTS ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Key Results</h2>
+        <div class="metric-row">
+          <div class="metric-block"><span class="metric-num">95.27%</span><span class="metric-label">Latest Snapshot Readiness</span></div>
+          <div class="metric-block"><span class="metric-num">204</span><span class="metric-label">Delayed Tasks</span></div>
+          <div class="metric-block"><span class="metric-num">76</span><span class="metric-label">High-Risk Tasks</span></div>
+          <div class="metric-block"><span class="metric-num">34</span><span class="metric-label">Critical Open Issues</span></div>
+          <div class="metric-block"><span class="metric-num">594.78K</span><span class="metric-label">Cost Variance</span></div>
+          <div class="metric-block"><span class="metric-num">4.3%</span><span class="metric-label">Cost Variance %</span></div>
+        </div>
+        <p class="case-body" style="text-align:center; margin-top:22px; max-width:640px; margin-left:auto; margin-right:auto;">
+          These figures reflect the latest weekly snapshot of the synthetic pre-opening scenario, not a real hotel.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ TECH STACK ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Tech Stack</h2>
+        <div class="tag-row" style="justify-content:center;">
+          <span>Python</span><span>Pandas</span><span>SQL Server</span><span>Power BI</span><span>DAX</span><span>Data Modeling</span><span>Data Analysis</span><span>Data Visualization</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ PROJECT LINKS ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <h2 class="case-heading">Project Links</h2>
+        <div class="case-cta-row">
+          <a class="btn btn-primary" href="https://github.com/ahmadbalubaid/hospitality-preopening-analytics" target="_blank" rel="noopener">View GitHub Repository</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ DISCLAIMER ============ -->
+    <section class="case-section narrow">
+      <div class="case-section-content">
+        <div class="disclaimer-box">
+          <div class="disclaimer-label">Portfolio Project Disclaimer</div>
+          <p class="disclaimer-text">This portfolio project uses synthetic operational data informed by publicly available hotel pre-opening frameworks. It contains no confidential or operational data from my employer or any real property.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"><hr></div>
+
+    <!-- ============ EXPLORE ANOTHER PROJECT ============ -->
+    <section class="case-section">
+      <div class="case-section-content">
+        <h2 class="case-heading">Explore Another Project</h2>
+        <div class="explore-grid">
+          <a class="explore-card" href="android-adware.html">
+            <div class="explore-eyebrow">Machine Learning &middot; Security</div>
+            <div class="explore-title">Android Adware Detection</div>
+          </a>
+          <a class="explore-card" href="trip-registration.html">
+            <div class="explore-eyebrow">Development &amp; Automation</div>
+            <div class="explore-title">Trip Registration Platform</div>
+          </a>
+        </div>
+
+        <div class="case-prevnext">
+          <div></div>
+          <a class="prevnext-link next" href="android-adware.html">
+            <span class="prevnext-label">Next Project</span>
+            <span class="prevnext-title">Android Adware Detection &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-back-footer">
+      <a class="case-study-link" href="index.html">&larr; Back to Portfolio</a>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-identity">
+        <div class="footer-name">Ahmed Balubaid</div>
+        <div class="footer-role">Data Analyst | IT Specialist</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ahmedbalubaid" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahmadbalubaid" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:ahmadbalubaid8@gmail.com">Email</a>
+        <a href="index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <img id="lightbox-image" src="" alt="">
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

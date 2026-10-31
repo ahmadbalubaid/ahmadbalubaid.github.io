@@ -1,61 +1,30 @@
 # Ahmed Balubaid — Portfolio
 
-Personal portfolio site. Static HTML/CSS/JS, no build step — just open `index.html` or deploy as-is.
+Personal portfolio site. Static HTML/CSS/JS, no build step — open `index.html` locally or deploy the folder directly to GitHub Pages.
 
-## Structure
+## Current portfolio
 
-All files sit flat at the repo root:
+The portfolio keeps the original warm editorial design (beige/green, Public Sans + Lora) and now includes four case studies:
 
-```
-.
-├── index.html                        Home — Hero, Projects, About/Skills/Experience, Footer
-├── hospitality.html                  Case study — Hospitality Pre-Opening Analytics
-├── android-adware.html               Case study — Android Adware Detection
-├── trip-registration.html            Case study — Trip Registration Platform
-├── style.css                         All styling (theme variables at the top)
-├── case-study.js                     Click-to-enlarge screenshot lightbox (case study pages only)
-├── AhmedBalubaid_CV.pdf              One-page résumé (linked from every Download Resume button)
-├── hospitality-dashboard.png         Hospitality project — Executive Overview dashboard
-├── 01_Executive_Overview.png         Hospitality case study — dashboard page 1
-├── 02_Action_Center.png              Hospitality case study — dashboard page 2
-├── 03_Vendor_Cost_Performance.png    Hospitality case study — dashboard page 3
-├── adware-detection-results.png      Adware Detection — model evaluation results
-├── adware-detection-pipeline.png     Adware Detection — research/implementation pipeline figure
-├── trip-registration-app.png         Trip Registration Platform — app screenshot
-└── README.md
-```
+1. **Retail Demand Forecasting & Inventory Intelligence** — Python, LightGBM/XGBoost, SQL Server, DAX, Power BI.
+2. **Hospitality Pre-Opening Analytics** — Python, SQL Server, Power BI, DAX.
+3. **Android Adware Detection** — Python, LightGBM, scikit-learn.
+4. **Trip Registration Platform** — Google Apps Script, JavaScript, HTML/CSS, Google Sheets.
 
-## Deploying with GitHub Pages
+## Main files
 
-1. Push this folder to a GitHub repo (e.g. `ahmedbalubaid/portfolio`, or `ahmedbalubaid.github.io` for a root-domain site).
-2. In the repo: **Settings → Pages → Source** → select the `main` branch, root folder.
-3. Your site goes live at `https://<username>.github.io/<repo>/` (or `https://<username>.github.io/` if the repo is named `<username>.github.io`).
+- `index.html` — homepage / projects / about / skills / experience.
+- `retail-demand-forecasting.html` — Retail forecasting case study.
+- `hospitality.html` — Hospitality analytics case study.
+- `android-adware.html` — Android ML case study.
+- `trip-registration.html` — Internal automation case study.
+- `style.css` — shared original design system and responsive rules.
+- `case-study.js` — click-to-enlarge screenshot lightbox.
+- `AhmedBalubaid_CV.pdf` — current one-page resume linked from every page.
+- `retail-01-...png` through `retail-07-...png` — high-resolution Retail Power BI screenshots.
 
-All internal links between pages use plain relative filenames (`hospitality.html`, `index.html#projects`, etc.), so this works unchanged on GitHub Pages, a subfolder, or any static host.
+## Deploying to GitHub Pages
 
-## What's built
+For the repository `ahmadbalubaid.github.io`, copy the contents of this folder into the repository root, commit, and push to `main`. GitHub Pages will serve `index.html` at `https://ahmadbalubaid.github.io/`.
 
-Warm, editorial theme (beige/green, Public Sans + Lora) — sticky nav, hero, Projects, a three-column About / Skills / Experience section, and a minimal footer, now extended with three dedicated case-study pages.
-
-- **Home** (`index.html`): the same hero and About/Skills/Experience/footer as before. Each of the three project cards is now a fully clickable link — hover lifts the card slightly and shows a "View Case Study →" affordance — leading to its own case study page. GitHub links were removed from the homepage cards; they now live inside each case study instead.
-- **Case studies** (`hospitality.html`, `android-adware.html`, `trip-registration.html`): same header/nav and footer as the homepage, a breadcrumb back to Projects, a case hero (category, title, subtitle, description, tech badges), a large real screenshot, then editorial sections — business problem, dataset/pipeline (built with plain HTML/CSS diagrams, no generated graphics), results as clean metric rows, tech stack, project links, and (where relevant) a disclaimer or an "Internal Project — Source Code Not Publicly Available" note. Every screenshot is click-to-enlarge (`case-study.js`). Each page ends with "Explore Another Project" links to the other two case studies and a link back to the full portfolio.
-- All content, metrics, and screenshots are exactly what was supplied — nothing invented.
-
-## Customizing the theme
-
-All colors live as CSS variables at the top of `style.css`:
-
-```css
-:root {
-  --bg: #F4F0E6;
-  --card-bg: #FBF9F3;
-  --text-primary: #292821;
-  --text-secondary: #6F6A60;
-  --green: #1F7A63;
-  --green-dark: #155B4B;
-  --beige: #EAE2D3;
-  --border: #DED6C8;
-}
-```
-
-The case-study-specific rules (hero, metric rows, workflow diagrams, screenshot frames, lightbox, feature grid, explore-project cards) are appended at the bottom of the same `style.css`, under the "CASE STUDY PAGES" comment block — they reuse the same variables and components as the homepage rather than introducing a separate design system.
+All internal links are relative, so no build process or path configuration is required.

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retail Demand Forecasting & Inventory Intelligence | Ahmed Balubaid</title>
+  <meta name="description" content="End-to-end retail demand forecasting and decision-support project using Python, LightGBM, XGBoost, SQL Server, DAX and Power BI across 54 stores and 33 product families." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a id="top"></a>
+<header class="site-nav"><div class="nav-inner"><a class="nav-logo" href="index.html#top">Ahmed Balubaid</a><nav class="nav-links" aria-label="Primary"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav><a class="btn btn-primary btn-nav" href="AhmedBalubaid_CV.pdf" download>Download Resume</a></div></header>
+<main>
+<div class="case-topbar section-inner"><a class="breadcrumb" href="index.html#projects">← Back to Projects</a></div>
+<section class="case-hero"><div class="case-hero-inner">
+  <div class="case-category">Machine Learning · Retail Analytics · Business Intelligence</div>
+  <h1 class="case-title">Retail Demand Forecasting & Inventory Intelligence</h1>
+  <div class="case-subtitle">16-Day Forecasting, Explainable Demand Risk & Power BI Decision Support</div>
+  <p class="case-desc">An end-to-end retail analytics case study built on Corporación Favorita data. The project forecasts demand across stores and product families, converts forecast behavior into explainable demand-risk priorities, and delivers the results through SQL Server and a seven-page Power BI decision-support report.</p>
+  <div class="tag-row case-badges"><span>Python</span><span>Pandas</span><span>LightGBM</span><span>XGBoost</span><span>SQL Server</span><span>Power BI</span><span>DAX</span></div>
+</div></section>
+<section class="case-hero-image"><div class="case-screenshot-frame" data-lightbox><img src="retail-01-executive-overview.png" alt="Retail Demand Forecasting & Inventory Intelligence — Executive Overview"></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section"><div class="case-section-content"><h2 class="case-heading">Project at a Glance</h2><div class="metric-row">
+<div class="metric-block"><span class="metric-num">54 × 33</span><span class="metric-label">Stores × Product Families</span></div>
+<div class="metric-block"><span class="metric-num">28,512</span><span class="metric-label">16-Day Forecast Rows</span></div>
+<div class="metric-block"><span class="metric-num">0.3942</span><span class="metric-label">Selected Ensemble RMSLE</span></div>
+<div class="metric-block"><span class="metric-num">16.0%</span><span class="metric-label">Lower Error vs Baseline</span></div>
+</div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">The Business Problem</h2><p class="case-body">Retail planners need to anticipate demand across many stores and product families before deciding where to focus inventory and replenishment attention. A forecast alone is not enough: management also needs to know which store-family combinations show unusual demand change, volatility, or uncertainty.</p><blockquote class="case-question">“How much should we expect to sell, where, and when — and which demand signals deserve immediate review?”</blockquote></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">Data & Forecasting Scope</h2><p class="case-body">The source data contains more than 3 million historical daily sales rows. The final forecasting scope covers 54 stores, 33 product families and a 16-day horizon from 16–31 August 2017, producing 28,512 daily predictions across 1,782 Store × Family series.</p><div class="data-entities">
+<div class="data-entity"><h3>Historical Sales</h3><p>Daily store-family sales history with promotions, holidays, transactions and store metadata.</p></div>
+<div class="data-entity"><h3>Leakage-Safe Features</h3><p>Origin-time lags, rolling statistics, same-weekday history, calendar features, promotions and activity status.</p></div>
+<div class="data-entity"><h3>Validation</h3><p>Five time-ordered validation folds with a 16-day embargo to reflect the real forecast horizon.</p></div>
+<div class="data-entity"><h3>Final Horizon</h3><p>16 days, generating 28,512 predictions with no negative or missing forecast values.</p></div>
+</div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">End-to-End Workflow</h2><div class="workflow">
+<div class="workflow-step">Exploratory Data Analysis</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">Leakage-Safe Feature Engineering</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">Time-Ordered Model Validation</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">LightGBM + XGBoost Ensemble Forecast</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">Demand-Based Risk Engine</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">SQL Server Analytics Layer</div><div class="workflow-arrow">↓</div>
+<div class="workflow-step">Power BI Decision Support</div>
+</div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">Model Selection</h2><p class="case-body">Random Forest, LightGBM and XGBoost were evaluated across five time-ordered folds. The selected model is a 50/50 LightGBM + XGBoost blend because it delivered the best mean RMSLE among the tested models while beating the baseline across all five folds.</p><div class="metric-row">
+<div class="metric-block"><span class="metric-num">0.4693</span><span class="metric-label">Same-Weekday Baseline RMSLE</span></div>
+<div class="metric-block"><span class="metric-num">0.3942</span><span class="metric-label">Selected Ensemble RMSLE</span></div>
+<div class="metric-block"><span class="metric-num">5</span><span class="metric-label">Time-Ordered Folds</span></div>
+<div class="metric-block"><span class="metric-num">16.0%</span><span class="metric-label">Relative Error Reduction</span></div>
+</div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">Demand Risk Engine</h2><p class="case-body">The forecast is converted into an explainable 0–100 Demand Risk Score for every Store × Family series using four dimensions: demand surge, demand decline, volatility and forecast uncertainty. The result is a review category, action priority and recommended action.</p><div class="metric-row">
+<div class="metric-block"><span class="metric-num">1,782</span><span class="metric-label">Series Assessed</span></div>
+<div class="metric-block"><span class="metric-num">304</span><span class="metric-label">High + Critical</span></div>
+<div class="metric-block"><span class="metric-num">123</span><span class="metric-label">P1 Immediate Review</span></div>
+<div class="metric-block"><span class="metric-num">48.657</span><span class="metric-label">Average Risk Score</span></div>
+</div><p class="case-body" style="margin-top:22px;">This is demand-based inventory attention, not a stockout or overstock prediction. The dataset does not contain inventory-on-hand, lead times, safety stock or reorder constraints.</p></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section"><div class="case-section-content"><h2 class="case-heading">Power BI Decision Support</h2>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">01 — Executive Overview</div><p class="screenshot-desc">Summarizes forecast volume, risk exposure, P1 actions, risk distribution and leading stores and product families.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-01-executive-overview.png" alt="Retail dashboard — Executive Overview"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">02 — Demand Forecast Analysis</div><p class="screenshot-desc">Explores the 16-day forecast by date, store and family, including promotion-associated demand and detailed daily predictions.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-02-demand-forecast-analysis.png" alt="Retail dashboard — Demand Forecast Analysis"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">03 — Demand Risk Command Center</div><p class="screenshot-desc">Examines risk dimensions, distribution, Store × Family risk patterns and the highest-risk combinations.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-03-demand-risk-command-center.png" alt="Retail dashboard — Demand Risk Command Center"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">04 — Action Priority & Decision Support</div><p class="screenshot-desc">Turns risk scores into operational review priorities and a filterable action register with recommended actions.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-04-action-priority-decision-support.png" alt="Retail dashboard — Action Priority and Decision Support"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">05 — Machine Learning Performance</div><p class="screenshot-desc">Documents model comparison, fold-level RMSLE, feature gain shares and validation limitations.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-05-machine-learning-performance.png" alt="Retail dashboard — Machine Learning Performance"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">06 — Store & Product Family Explorer</div><p class="screenshot-desc">Provides an interactive view of demand, historical context, risk and recommended actions by store and family.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-06-store-product-family-explorer.png" alt="Retail dashboard — Store and Product Family Explorer"></div></div>
+<div class="screenshot-block"><div class="screenshot-block-head"><div class="screenshot-title">07 — Methodology & Project Documentation</div><p class="screenshot-desc">Makes the forecasting assumptions, leakage controls, risk methodology and limitations explicit for reviewers.</p></div><div class="case-screenshot-frame" data-lightbox><img src="retail-07-methodology-documentation.png" alt="Retail dashboard — Methodology and Project Documentation"></div></div>
+</div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">Technology</h2><div class="tag-row" style="justify-content:center;"><span>Python</span><span>Pandas</span><span>scikit-learn</span><span>LightGBM</span><span>XGBoost</span><span>SQL Server</span><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Git</span></div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><h2 class="case-heading">Project Links</h2><div class="case-cta-row"><a class="btn btn-primary" href="https://github.com/ahmadbalubaid/retail-demand-forecasting-inventory-intelligence" target="_blank" rel="noopener">View GitHub Repository</a></div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section narrow"><div class="case-section-content"><div class="disclaimer-box"><div class="disclaimer-label">Historical Case Study</div><p class="disclaimer-text">The analysis forecasts sales for 16–31 August 2017 using historical Corporación Favorita data. It is not live store monitoring. Risk scores are decision-support signals and should not be interpreted as direct purchasing quantities or inventory savings.</p></div></div></section>
+<div class="section-divider"><hr></div>
+
+<section class="case-section"><div class="case-section-content"><h2 class="case-heading">Explore Another Project</h2><div class="explore-grid"><a class="explore-card" href="hospitality.html"><div class="explore-eyebrow">Data Analytics · Business Intelligence</div><div class="explore-title">Hospitality Pre-Opening Analytics</div></a><a class="explore-card" href="android-adware.html"><div class="explore-eyebrow">Machine Learning · Security</div><div class="explore-title">Android Adware Detection</div></a></div><div class="case-prevnext"><div></div><a class="prevnext-link next" href="hospitality.html"><span class="prevnext-label">Next Project</span><span class="prevnext-title">Hospitality Pre-Opening Analytics →</span></a></div></div></section>
+<div class="case-back-footer"><a class="case-study-link" href="index.html">← Back to Portfolio</a></div>
+</main>
+<footer class="site-footer" id="contact"><div class="footer-inner"><div class="footer-identity"><div class="footer-name">Ahmed Balubaid</div><div class="footer-role">Data Analyst | Power BI | SQL | Python</div></div><div class="footer-links"><a href="https://www.linkedin.com/in/ahmedbalubaid" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/ahmadbalubaid" target="_blank" rel="noopener">GitHub</a><a href="mailto:ahmadbalubaid8@gmail.com">Email</a><a href="index.html#top">Back to top</a></div></div></footer>
+<div class="lightbox-overlay" id="lightbox-overlay"><img id="lightbox-image" src="" alt=""></div>
+<script src="case-study.js"></script>
+</body></html>
